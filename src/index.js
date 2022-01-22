@@ -9,14 +9,21 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
+const feedback = {
+    feeling: '', 
+    understanding: '',
+    support: '',
+    comments: ''
+};
+
 // setup reducer for feedback
-const feedbackReducer = (state = [], action) => {
+const feedbackReducer = (state = feedback, action) => {
     switch(action.type) {
         case 'ADD_TO':
-            return [...state, action.payload];
+            return {...state, ...action.payload};
     }
     return state;
-}
+};
 
 // setup store
 const store = createStore(
@@ -24,7 +31,7 @@ const store = createStore(
         feedbackReducer
     }),
     applyMiddleware(logger)
-)
+);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
