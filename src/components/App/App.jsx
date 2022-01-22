@@ -2,8 +2,11 @@ import React from 'react';
 import axios from 'axios';
 // import HashRouter, Route, and Link
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
-// import feel.jsx
+// import components
 import Feel from '../Feel/Feel';
+import Understand from '../Understand/Understand';
+import Support from '../Support/Support';
+import Comment from '../Comment/Comment';
 
 import './App.css';
 
@@ -21,6 +24,18 @@ function App() {
       <Link to="/feel">Start!</Link>
         <Route exact path="/feel">
           <Feel />
+        </Route>
+
+        <Route exact path="/understand">
+          <Understand />
+        </Route>
+
+        <Route exact path="/support">
+          <Support />
+        </Route>
+
+        <Route>
+          <Comment />
         </Route>
       </Router>
     </div>
