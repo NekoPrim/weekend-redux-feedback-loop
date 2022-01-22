@@ -15,10 +15,10 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-      {/* navigate to feel.jsx */}
-      <Router>
-      <Link to="/feel">Start!</Link>
       {/* wrap in router */}
+      <Router>
+      {/* navigate to feel.jsx */}
+      <Link to="/feel">Start!</Link>
         <Route exact path="/feel">
           <Feel />
         </Route>
