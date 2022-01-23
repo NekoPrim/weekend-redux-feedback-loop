@@ -1,4 +1,4 @@
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import * as React from 'react';
 import axios from 'axios';
@@ -9,15 +9,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {Button} from '@mui/material';
 
 const Review = () => {
 
     // get access to global variable
     const feedbackStored = useSelector(store => store.feedbackReducer);
     console.log('Review:', feedbackStored);
-
-    // setup dispatch
-    const dispatch = useDispatch();
 
     // called with onClick button
     const handleSubmit = () => {
@@ -27,11 +25,6 @@ const Review = () => {
             .then(() => {
                 // tell client of success
                 console.log('axios POST success!');
-
-                // clear feedback store
-                dispatch({
-                    type: 'CLEAR'
-                });
             })
             .catch((err) => {
                 // tell client of failure
@@ -66,8 +59,8 @@ const Review = () => {
         </Table>
     </TableContainer>
     
-    <Link to="/home">
-    <button onClick={handleSubmit}>Submit</button>
+    <Link to="/complete">
+    <Button variant="contained" onClick={handleSubmit}>Submit</Button>
     </Link>
     </>
     );

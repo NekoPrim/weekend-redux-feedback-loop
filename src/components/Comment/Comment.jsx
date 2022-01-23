@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import {Button} from '@mui/material';
 
 const Comment = () => {
 
@@ -57,9 +58,9 @@ const Comment = () => {
             </Box>
             {/* navigate to next page */}
             <Link to="/review">
-                <button variant="contained" onClick={onSubmit}>
+                <Button  variant="contained" onClick={onSubmit}>
                     Next
-                </button>
+                </Button>
             </Link>
         </div>
     );
