@@ -22,6 +22,8 @@ const feedbackReducer = (state = feedback, action) => {
     switch(action.type) {
         case 'ADD_TO':
             return {...state, ...action.payload};
+        case 'CLEAR':
+            return feedback;
     }
     return state;
 };

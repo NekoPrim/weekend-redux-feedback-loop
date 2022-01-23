@@ -56,7 +56,7 @@ const RadioForm = ({i, next}) => {
             <div>
             {/* navigate to next page */}
             <Link to={`/${next}`}>
-                <button variant="contained" onClick={onSubmit}>
+                <button disabled={!feedback[i]} variant="contained" onClick={onSubmit}>
                     Next
                 </button>
             </Link>
