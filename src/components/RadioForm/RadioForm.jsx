@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {FormControl, FormControlLabel,Radio, RadioGroup} from '@mui/material';
+import {FormControl, FormControlLabel,Radio, RadioGroup, Button} from '@mui/material';
 
 // this form is used in Feel, Understand, and Support components
 // i prop sets name in FormControlLabel
@@ -56,9 +56,9 @@ const RadioForm = ({i, next}) => {
             <div>
             {/* navigate to next page */}
             <Link to={`/${next}`}>
-                <button disabled={!feedback[i]} variant="contained" onClick={onSubmit}>
+                <Button disabled={!feedback[i]} variant="contained" onClick={onSubmit}>
                     Next
-                </button>
+                </Button>
             </Link>
         </div>
     </div>
