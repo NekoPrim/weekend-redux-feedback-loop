@@ -10,7 +10,7 @@
         [ ] 1 thru 5 is required to advance / alert if null
         [X] store in reducer
     [ ] Any comments you want to leave?
-        [ ] store in reducer
+        [X] store in reducer
 [ ] navigate from question 1 to 4
     [ ] HashRouter, Route, Link (react-router-dom)
 [ ] review component

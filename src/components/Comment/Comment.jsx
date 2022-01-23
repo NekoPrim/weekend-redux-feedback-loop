@@ -56,7 +56,7 @@ const Comment = () => {
                 />
             </Box>
             {/* navigate to next page */}
-            <Link to="/home">
+            <Link to="/review">
                 <button variant="contained" onClick={onSubmit}>
                     Next
                 </button>
