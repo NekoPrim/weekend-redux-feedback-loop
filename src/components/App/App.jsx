@@ -7,6 +7,7 @@ import Feel from '../Feel/Feel';
 import Understand from '../Understand/Understand';
 import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
+import Review from '../Review/Review';
 
 import './App.css';
 
@@ -14,14 +15,14 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
       {/* wrap in router */}
       <Router>
         {/* user starts here */}
         <Route exact path="/home">
+        <header className='App-header'>
+        <h1 className='App-title'>Feedback!</h1>
+        <h4>Don't forget it!</h4>
+      </header>
           <Link to="/feel">Start!</Link>
         </Route>
 
@@ -39,6 +40,10 @@ function App() {
 
         <Route exact path="/comment">
           <Comment />
+        </Route>
+
+        <Route exact path="/review">
+          <Review />
         </Route>
       </Router>
     </div>
