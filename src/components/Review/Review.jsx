@@ -1,4 +1,4 @@
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {Link} from 'react-router-dom';
 import * as React from 'react';
 import axios from 'axios';
@@ -16,6 +16,9 @@ const Review = () => {
     const feedbackStored = useSelector(store => store.feedbackReducer);
     console.log('Review:', feedbackStored);
 
+    // setup dispatch
+    const dispatch = useDispatch();
+
     // called with onClick button
     const handleSubmit = () => {
         
@@ -24,6 +27,11 @@ const Review = () => {
             .then(() => {
                 // tell client of success
                 console.log('axios POST success!');
+
+                // clear feedback store
+                dispatch({
+                    type: 'CLEAR'
+                });
             })
             .catch((err) => {
                 // tell client of failure
@@ -31,6 +39,7 @@ const Review = () => {
             });
     }
 
+    // render completed feedback onto DOM
     return(
         <>
         <h3>Your feedback</h3>

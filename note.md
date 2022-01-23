@@ -11,11 +11,11 @@
         [X] store in reducer
     [ ] Any comments you want to leave?
         [X] store in reducer
-[ ] navigate from question 1 to 4
-    [ ] HashRouter, Route, Link (react-router-dom)
+[X] navigate from question 1 to 4
+    [X] HashRouter, Route, Link (react-router-dom)
 [ ] review component
-    [ ] submit button
-    [ ] send data to database
+    [X] submit button
+    [X] send data to database
     [ ] notify user of completion
-    [ ] navigate back to beginning
+    [X] navigate back to beginning
 [ ] update README
