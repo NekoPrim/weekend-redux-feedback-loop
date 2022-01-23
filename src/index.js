@@ -9,6 +9,7 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
+// created feedback store variable
 const feedback = {
     feeling: '', 
     understanding: '',
@@ -33,5 +34,6 @@ const store = createStore(
     applyMiddleware(logger)
 );
 
+// setup Provider
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();

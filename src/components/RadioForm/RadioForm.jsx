@@ -3,15 +3,18 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {FormControl, FormControlLabel,Radio, RadioGroup} from '@mui/material';
 
+// this form is used in Feel, Understand, and Support components
+// i prop sets name in FormControlLabel
+// next prop sets Link to for Next button
 const RadioForm = ({i, next}) => {
 
     // get access to global variable
     const feedbackStored = useSelector(store => store.feedbackReducer);
 
-    // setup grabbing value from form
+    // set feedback reducer to useState so it can be set later
     const [feedback, setFeedback] = useState(feedbackStored);
 
-    // grab value of 1 thru 5 feeling form
+    // grab value of 1 thru 5 radio form
     const handleInputChange = (event) => {
         setFeedback({
             ...feedback,
@@ -22,9 +25,9 @@ const RadioForm = ({i, next}) => {
     // setup dispatch
     const dispatch = useDispatch();
 
-    // function called onClick button
-    const onSubmit = () => {
-        console.log('in onSubmit Understand', feedback);
+    // function called by onClick button
+    const onSubmit = (event) => {
+        console.log('feedback from next button', feedback);
 
         // send data to feedbackReducer
         dispatch({
@@ -37,11 +40,11 @@ const RadioForm = ({i, next}) => {
         <div>
             <FormControl>
                     {/* select option 1 through 5 */}
-                    <RadioGroup>
+                    <RadioGroup required row>
                         {
                         [1, 2, 3, 4, 5].map((x, index) => (
                             <FormControlLabel key={index}
-                                control={<Radio />}
+                                control={<Radio required={true} />}
                                 label={x}
                                 name={i}
                                 value={x}
@@ -51,6 +54,7 @@ const RadioForm = ({i, next}) => {
                     </RadioGroup>
                 </FormControl>
             <div>
+            {/* navigate to next page */}
             <Link to={`/${next}`}>
                 <button variant="contained" onClick={onSubmit}>
                     Next

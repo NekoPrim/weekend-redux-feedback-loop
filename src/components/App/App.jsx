@@ -20,8 +20,11 @@ function App() {
       </header>
       {/* wrap in router */}
       <Router>
-      {/* navigate to feel.jsx */}
-      <Link to="/feel">Start!</Link>
+        {/* user starts here */}
+        <Route exact path="/home">
+          <Link to="/feel">Start!</Link>
+        </Route>
+
         <Route exact path="/feel">
           <Feel />
         </Route>
@@ -34,7 +37,7 @@ function App() {
           <Support />
         </Route>
 
-        <Route>
+        <Route exact path="/comment">
           <Comment />
         </Route>
       </Router>

@@ -2,13 +2,13 @@
 [ ] 4 views /components
     [ ] How are you feeling today?
         [ ] 1 thru 5 is required to advance / alert if null
-        [ ] store in reducer
+        [X] store in reducer
     [ ] How well are you understanding the content?
         [ ] 1 thru 5 is required to advance / alert if null
-        [ ] store in reducer
+        [X] store in reducer
     [ ] How well are you being supported?
         [ ] 1 thru 5 is required to advance / alert if null
-        [ ] store in reducer
+        [X] store in reducer
     [ ] Any comments you want to leave?
         [ ] store in reducer
 [ ] navigate from question 1 to 4
