@@ -59,9 +59,8 @@ const Review = () => {
         </Table>
     </TableContainer>
     
-    <Link to="/complete">
-    <Button variant="contained" onClick={handleSubmit}>Submit</Button>
-    </Link>
+    <Button component={Link} to="/complete" variant="contained" onClick={handleSubmit}>Submit</Button>
+
     </>
     );
 }
