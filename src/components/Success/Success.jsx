@@ -18,11 +18,9 @@ const Success = ()  => {
         <div>
             <h1>Thank you for your feedback!</h1>
             {/* navigate to next page */}
-            <Link to="/feel">
-                <Button variant="contained" onClick={onClear}>
+                <Button component={Link} to="/feel" variant="contained" onClick={onClear}>
                     Redo feedback!
                 </Button>
-            </Link>
         </div>
     )
 }
