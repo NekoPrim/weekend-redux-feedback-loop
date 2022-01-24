@@ -1,6 +1,7 @@
 import React from 'react';
 // import HashRouter, Route, and Link
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {Button} from '@mui/material';
 // import components
 import Feel from '../Feel/Feel';
 import Understand from '../Understand/Understand';
@@ -23,7 +24,7 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
         <nav>
-        <Link to="/feel">Start!</Link>
+        <Button component={Link} to="/feel" variant="contained">Start</Button>
         </nav>
 
         <Route exact path="/feel">

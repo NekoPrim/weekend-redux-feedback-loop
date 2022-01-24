@@ -39,3 +39,11 @@ const store = createStore(
 // setup Provider
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
+
+// Redux store
+// {
+//     feeling: 3,
+//     understanding: 1,
+//     support: 6,
+//     comments: 'YOLO'
+// }
